@@ -33,7 +33,10 @@ def expected_entity_type():
 	x = get_pos_x()
 	y = get_pos_y()
 	
-	return world_map[::-1][y][x]
+	if 0 <= y < len(world_map) and 0 <= x < len(world_map[0]):
+		return world_map[::-1][y][x]
+		
+	return H
 
 def handle():
 	size = get_world_size()
