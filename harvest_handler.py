@@ -1,7 +1,8 @@
 def handle():
 	type = get_entity_type()
 	
-	if type == Entities.Sunflower and measure() != None and measure() < 7:
+	measurement = measure()
+	if type == Entities.Sunflower and measurement != None and measurement < 7:
 		return
 
 	if can_harvest():
